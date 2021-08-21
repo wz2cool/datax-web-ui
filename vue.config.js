@@ -38,7 +38,7 @@ module.exports = {
       // detail: https://cli.vuejs.org/config/#devserver-proxy
       //代理 /dev-api/api 到 http://localhost:8066/api
       [process.env.VUE_APP_API]: {
-        target: `http://localhost:${apiPort}/api`,
+        target: `http://localhost:${apiPort}/datax-admin/api`,
         changeOrigin: true,
         pathRewrite: {
           ['^' + process.env.VUE_APP_API]: ''
@@ -47,7 +47,7 @@ module.exports = {
       // mock 的代理
       // change xxx-api/login => mock/login
       [process.env.VUE_APP_BASE_API]: {
-        target: `http://localhost:${port}/mock`,
+        target: `http://localhost:${port}/datax-admin/mock`,
         changeOrigin: true,
         pathRewrite: {
           ['^' + process.env.VUE_APP_BASE_API]: ''
